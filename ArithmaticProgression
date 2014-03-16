@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * Find the missing number in the Arithmatic Progression
+ * Find the missing number in the Arithmatic Progression and print it
  */
 
 public class ArithmaticProgression {
