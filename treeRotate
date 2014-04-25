@@ -1,0 +1,21 @@
+	public static Node treeRightRotate(Node root){
+		if(root == null ) return null; 
+		
+		Node ckLeft = treeRightRotate(root.left);
+		Node ckRight = treeRightRotate(root.right);
+		
+		if(ckLeft!=null){
+			
+			Node q = ckLeft.right;
+			Node r = ckLeft.left;
+			
+			ckLeft.left = ckRight;
+			root.right = q;
+			root.left = r;
+			ckLeft.right = root;
+			
+			return ckLeft;
+		}
+		
+		return root;
+	}
