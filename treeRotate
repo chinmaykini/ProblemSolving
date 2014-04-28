@@ -19,3 +19,43 @@
 		
 		return root;
 	}
+
+	@Override
+	public TreeNode rotateUpsideDown(TreeNode root) {
+		
+		return rotateUpsideDown(root,null);
+		
+	}
+
+	private TreeNode rotateUpsideDown(TreeNode currentRoot, TreeNode newRightChild) {
+
+		if(currentRoot == null) return null;
+//		if(newRightChild == null ) return currentRoot;
+
+		TreeNode leftChild = currentRoot.left;
+		TreeNode rightChild = currentRoot.right;
+		
+		TreeNode nextLevelRoot = null;
+		if(leftChild!=null)
+			nextLevelRoot = leftChild.left;
+		
+		if(rightChild!=null){
+			leftChild.left = rightChild;
+			leftChild.right = currentRoot;
+			currentRoot.left = null;
+			currentRoot.right = newRightChild;
+			if(nextLevelRoot!=null)
+				return rotateUpsideDown(nextLevelRoot,leftChild );
+			
+		} else {
+			leftChild.right = currentRoot;
+			currentRoot.left = null;
+			currentRoot.right = newRightChild;
+			if(nextLevelRoot!=null)
+				return rotateUpsideDown(nextLevelRoot,leftChild );
+			
+		}
+		
+		return leftChild;
+
+	}
