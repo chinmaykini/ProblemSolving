@@ -1,33 +1,16 @@
-/ArrayJumpGame.class
-/BoggleSolver.class
-/CoinFlip.class
-/DistanceBetweenWords.class
-/DutchNationalFlag.class
-/FactorCombinations.class
-/IsomorphicWords.class
-/KadaneAlgo.class
-/NumberBaseRespresenation.class
-/PermutationString.class
-/PermutationsOfSet.class
-/Power.class
-/PowerSet.class
-/PrettyNumberFormatting.class
-/PrimeFactors.class
-/ProductArray.class
-/QueueUsingStack.class
-/RPN.class
-/ReverseString.class
-/ReverseWords.class
-/RomanNumerals.class
-/RotatedSortedArray.class
-/TaskAssignToServers.class
-/ArithmaticProgression.class
-/ATOI.class
-/XOR.class
-/Enumoperations.class
-/Enumoperations$FRUITFUNC.class
-/Enumoperations$Fruit.class
-/Enumoperations$PrettyPrintAccounting.class
-/Enumoperations$TESTFRUITFUNC.class
-/KthFrequentWord.class
-/KthFrequentWord$WordNode.class
+# Created by https://www.gitignore.io/api/java
+
+### Java ###
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/bin/
