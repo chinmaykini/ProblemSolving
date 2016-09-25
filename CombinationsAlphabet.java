@@ -22,11 +22,18 @@ public class CombinationsAlphabet {
 		result.add(currentChar.toString());
 		combinationAlphabetHelper(result, index+1, word);
 		result.remove(result.size()-1);
+
 		if((index <= word.length-2) && (word[index+1] == '1' ||  word[index+1] == '2') ){
 			Character nextChar = word[index+1];
+			
+			if(result.lastIndexOf(currentChar) > 0){
+				result.remove(result.lastIndexOf(currentChar));
+			}
+			
 			result.add(currentChar.toString() + nextChar.toString());
 			combinationAlphabetHelper(result, index+2, word);
 			result.remove(result.size()-1);
+
 		}
 		
 	}
