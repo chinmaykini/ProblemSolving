@@ -5,7 +5,7 @@ public class CombinationsAlphabet {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String word = "121";
+		String word = "1123";
 		combinationAlphabetHelper(new LinkedList<String>(), 0, word.toCharArray());
 
 	}
